@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <script type="text/javascript" src="form.js"></script>
+    </head>
+    <body>
+        <div style="display:table">
+            <input type="text" name="title" placeholder="Title">
+            <textarea name="text" placeholder="Description"></textarea>
+            <p>Date</p>
+            <span id="rangeValue">16</span>
+            <input type="range" min="1" max="31" name="date" onchange="document.getElementById('rangeValue').innerHTML = this.value">
+            <input type="text" name="author" placeholder="Author">
+            <input type="button" value="Send article" onclick="createArticle()">
+        </div>
+        <input type="button" value="Go to index.html" onclick="document.location.href = 'http://localhost:3000/index.html'">
+    </body>
+</html>     
