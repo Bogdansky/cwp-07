@@ -1,0 +1,12 @@
+input[type=button]{
+    border-radius: 10%
+}
+#articles{
+    display: inline;
+}
+#button{
+    display: block
+}
+#title{
+    background: red
+}

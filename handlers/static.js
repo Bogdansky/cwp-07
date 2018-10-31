@@ -5,6 +5,6 @@ module.exports.sendStatic = function sendStatic(req, res){
     let url = req.url === '/' ? 'index.html' : req.url;
     res.statusCode = 200;
     res.setHeader('Content-Type', mime.lookup(url));
-    let inputStream = fs.createReadStream(`public${url}`);
+    let inputStream = fs.createReadStream(`public/${url}`);
     inputStream.pipe(res);
 }

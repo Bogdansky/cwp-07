@@ -25,12 +25,10 @@ module.exports.readall = function readall(req, res, payload, cb){
         cb(null,
            {
                 items:result,
-                meta:{
-                        page:payload.page,
-                        pages:pageCount,
-                        count:articles.length,
-                        limit:payload.limit
-                }
+                page:payload.page,
+                pages:pageCount,
+                count:articles.length,
+                limit:payload.limit
            }
         );
     }
