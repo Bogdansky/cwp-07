@@ -26,6 +26,7 @@ const handlers = {
   '/index.html' : static.sendStatic,
   '/form.html' : static.sendStatic,
   '/app.js' : static.sendStatic,
+  '/index.js' : static.sendStatic,
   '/form.js' : static.sendStatic,
   '/site.css' : static.sendStatic,
   '/favicon.ico' : static.sendStatic,

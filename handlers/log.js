@@ -1,10 +1,10 @@
 const fs = require('fs');
 
-module.exports.log = function log(object){
+module.exports.log = function log(object, path='./log.json'){
     object.date = getDate();
-    const json = JSON.parse(fs.readFileSync('./log.json'));
+    const json = JSON.parse(fs.readFileSync(path));
     json.push(object);
-    fs.writeFile('./log.json', JSON.stringify(json), (err) => {
+    fs.writeFile(path, JSON.stringify(json), (err) => {
         if (err) 
         throw err;
     })
