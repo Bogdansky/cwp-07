@@ -71,10 +71,7 @@ $(function(){
     text.textContent = `Description: ${articleValue.text}`;
     date.textContent = `Date: ${articleValue.date}`;
     author.textContent = `Author: ${articleValue.author}`;
-    article.appendChild(title);
-    article.appendChild(text);
-    article.appendChild(date);
-    article.appendChild(author);
+    appendAll(article, [title,text,date,author]);
     if (typeof articleValue.comments !== 'undefined' && articleValue.comments.length > 0){
       article.append(getComments(articleValue.comments))
     }
@@ -105,8 +102,12 @@ $(function(){
     text.textContent = `Text: ${commentValue.text}`;
     date.textContent = `Date: ${commentValue.date}`;
     author.textContent = `Author ${commentValue.author}`;
-    comment.appendChild(text);
-    comment.appendChild(date);
-    comment.appendChild(author);
+    appendAll(comment, [text,date,author]);
     return comment;
+  }
+
+  function appendAll(parent, childrens){
+    for (let index = 0; index < childrens.length; index++){
+      parent.appendChild(childrens[index]);
+    }
   }
